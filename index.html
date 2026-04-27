@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="ri-planet-line logo-icon"></i>
+            <h2>Global Explorer</h2>
+            <p>Explore. Connect. Discover.</p>
+        </div>
+
+        <div class="menu">
+            <button id="allBtn">
+                <i class="ri-group-line"></i> All Users
+            </button>
+
+            <button id="maleBtn">
+                <i class="ri-men-line"></i> Male
+            </button>
+
+            <button id="femaleBtn">
+                <i class="ri-women-line"></i> Female
+            </button>
+
+            <button id="pinnedBtn">
+                <i class="ri-star-line"></i> Pinned
+            </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="filters">
+
+            <h4>Country</h4>
+            <select id="countryFilter">
+                <option value="">🌍 All Countries</option>
+            </select>
+
+            <h4>Sort By</h4>
+            <select id="sortSelect">
+                <option value="random">Random</option>
+                <option value="az">A → Z</option>
+                <option value="za">Z → A</option>
+            </select>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-card">
+            <p>
+                🌎 Connect with people from different cultures and make the world smaller.
+            </p>
+
+            <div class="chart">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Global Explorer</p>
+            <small>Made with ❤️ for curiosity</small>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="top-bar">
+
+            <div class="title">
+                <h1>🌍 Global <span>Explorer</span></h1>
+                <p>Discover amazing people around the world 🌎</p>
+            </div>
+
+            <div class="actions">
+                <input
+                    type="number"
+                    id="userCount"
+                    min="1"
+                    max="50"
+                    value="10">
+
+                <button id="generateBtn">
+                    <i class="ri-shuffle-line"></i>
+                    Generate Users
+                </button>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="info-row">
+            <div>👥 <b>Random Users</b></div>
+            <div>⭐ Click the star to save your favorite people</div>
+        </div>
+
+        <div id="loader" class="loader hidden"></div>
+
+        <div id="grid" class="grid"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
